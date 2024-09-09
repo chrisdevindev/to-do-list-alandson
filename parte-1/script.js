@@ -1,6 +1,4 @@
 const dialog = document.getElementById("task-dialog");
-const emptyState = document.getElementById("empty-state");
-const tasksContent = document.querySelector(".tasks-content");
 const taskList = [];
 
 function handleSaveTask() {

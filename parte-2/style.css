@@ -19,18 +19,18 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   color: var(--white);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--black-700);
+
   margin: 0;
-  margin-inline: auto;
-  overflow-x: hidden;
 }
 
 .logo {
@@ -45,12 +45,12 @@ body {
   width: 622px;
 }
 
-.tasks__header {
+.tasks-header {
   width: 100%;
   border-bottom: 1px solid var(--black-400);
 }
 
-.tasks__header h1 {
+.tasks-header h1 {
   font-size: 1.5rem;
   font-weight: 400;
   margin: 0;
@@ -133,7 +133,6 @@ input[type="checkbox" i] {
   border-style: dashed;
 }
 
-
 /* ///////////////////////////////////////////////////////////////// */
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.775);
@@ -145,38 +144,54 @@ dialog::backdrop {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #2b2d31;
 }
 
 #task-dialog h2 {
   margin-top: 0;
+  color: white;
 }
 
-#task-dialog form {
+.form-container {
   display: flex;
   flex-direction: column;
 }
 
-#task-dialog label {
+.form-container label {
   margin-top: 10px;
+  color: white;
 }
 
-#task-dialog input,
-#task-dialog textarea {
+.form-container input {
+  background: #35373c;
   padding: 8px;
   margin-top: 5px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #535353;
+  color: white;
 }
 
-#task-dialog button {
-  margin-top: 15px;
+.buttons-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+#cancel-btn {
   padding: 10px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  background: none;
+  color: white;
 }
 
-#cancel-btn {
-  background-color: #f44336;
+#save-btn {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #1d46ca;
   color: white;
 }

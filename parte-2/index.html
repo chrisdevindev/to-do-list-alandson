@@ -26,7 +26,7 @@
 
     <main>
       <section class="tasks">
-        <div class="tasks__header">
+        <div class="tasks-header">
           <h1>Tarefas</h1>
         </div>
         <div id="empty-state">
@@ -40,7 +40,7 @@
         <div class="tasks-content"></div>
 
         <button class="add-tasks-button" onclick="handleShowModal()">
-                Adicionar tarefas
+          Adicionar tarefas
         </button>
       </section>
     </main>
@@ -48,16 +48,19 @@
     <dialog id="task-dialog">
       <h2>Adicionar nova tarefa</h2>
 
-      <label for="task-title">Título</label>
-      <input type="text" id="task-title" name="task-title" required />
+      <div class="form-container">
+        <label for="task-title">Nome</label>
+        <input type="text" id="task-title" name="task-title" required />
 
-      <label for="task-desc">Descrição</label>
-      <textarea id="task-desc" name="task-desc" required></textarea>
+        <label for="task-desc">Descrição</label>
+        <input id="task-desc" name="task-desc" required></textarea>
+      </div>
 
-      <button type="submit" onclick="handleSaveTask()">Salvar</button>
-      <button type="button" id="cancel-btn" onclick="handleCloseModal()">
-        Cancelar
-      </button>
+      <div class="buttons-container">
+        <button id="cancel-btn" onclick="handleCloseModal()">Cancelar</button>
+        <button id="save-btn" onclick="handleSaveTask()">Salvar</button>
+      </div>
+
     </dialog>
 
     <script src="script.js"></script>
